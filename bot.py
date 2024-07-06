@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import random
 import logging
+import os
 from datetime import datetime
 
 # ログ設定
