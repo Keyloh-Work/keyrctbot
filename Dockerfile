@@ -11,5 +11,8 @@ RUN pip install -r requirements.txt
 # アプリケーションコードをコピー
 COPY . .
 
+# スクリプトに実行権限を付与
+RUN chmod +x start.sh
+
 # アプリケーションを起動
-CMD ["python", "bot.py"]
+CMD ["./start.sh"]
