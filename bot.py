@@ -3,6 +3,7 @@ from discord.ext import commands
 import random
 import logging
 import os
+import csv
 from datetime import datetime
 
 # ログ設定
@@ -33,23 +34,29 @@ class GachaView(discord.ui.View):
             url_info = get_random_url()
             embed = discord.Embed(title="テストガチャ")
             embed.set_image(url=url_info['url'])
-            embed.add_field(name="Details", value=url_info['details'], inline=False)
+            embed.add_field(name="Character Name", value=url_info['chname'], inline=False)
+            embed.add_field(name="Rarity", value=url_info['rarity'], inline=False)
             await interaction.response.send_message(embed=embed, ephemeral=True)
             
             # ログに保存
             user = interaction.user
-            log_message = f"{user.name}#{user.discriminator} (ID: {user.id}) got URL: {url_info['url']} with details: {url_info['details']}"
+            log_message = f"{user.name}#{user.discriminator} (ID: {user.id}) got URL: {url_info['url']} with character: {url_info['chname']}, rarity: {url_info['rarity']}"
             logging.info(log_message)
             
             user_uses[user_id] += 1  # ユーザーごとのカウンターを更新
 
 def get_random_url():
-    # 仮のガチャデータ
-    gacha_data = [
-        {"url": "https://example.com/1.jpg", "details": "Details 1", "rate": 0.1},
-        {"url": "https://example.com/2.jpg", "details": "Details 2", "rate": 0.2},
-        {"url": "https://example.com/3.jpg", "details": "Details 3", "rate": 0.7}
-    ]
+    # CSVからガチャデータを読み込む
+    gacha_data = []
+    with open('gacha_data.csv', newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            gacha_data.append({
+                "url": row["url"],
+                "chname": row["chname"],
+                "rarity": row["rarity"],
+                "rate": float(row["rate"])
+            })
     
     total_rate = sum(item["rate"] for item in gacha_data)
     random_value = random.uniform(0, total_rate)
