@@ -4,6 +4,7 @@ import random
 import logging
 import os
 import csv
+import chardet
 from datetime import datetime
 
 # ログ設定
@@ -46,9 +47,14 @@ class GachaView(discord.ui.View):
             user_uses[user_id] += 1  # ユーザーごとのカウンターを更新
 
 def get_random_url():
+    # CSVファイルのエンコーディングを自動検出する
+    with open('gacha_data.csv', 'rb') as f:
+        result = chardet.detect(f.read())
+    encoding = result['encoding']
+    
     # CSVからガチャデータを読み込む
     gacha_data = []
-    with open('gacha_data.csv', newline='', encoding='utf-8') as csvfile:
+    with open('gacha_data.csv', newline='', encoding=encoding) as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             gacha_data.append({
