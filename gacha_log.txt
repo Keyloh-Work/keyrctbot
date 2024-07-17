@@ -1,0 +1,731 @@
+2024-07-14 22:28:20,978 - PyNaCl is not installed, voice will NOT be supported
+2024-07-14 22:28:20,979 - logging in using static token
+2024-07-14 22:35:00,527 - PyNaCl is not installed, voice will NOT be supported
+2024-07-14 22:35:00,529 - logging in using static token
+2024-07-14 22:35:01,766 - Shard ID None has connected to Gateway (Session ID: 00ad2c96c5df337a20fc2eeac798b2c2).
+2024-07-14 22:35:39,677 - Ignoring exception in view <GachaView timeout=180.0 children=1> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Gacha!' emoji=None row=None sku_id=None>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ui\view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 35, in gacha_button_callback
+    url_info = get_random_url()
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 64, in get_random_url
+    "rate": float(row["rate"])
+            ^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+2024-07-14 22:35:53,359 - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 89, in <module>
+    bot.run(TOKEN)
+  File "C:\Python312\Lib\site-packages\discord\client.py", line 869, in run
+    asyncio.run(runner())
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Python312\Lib\asyncio\base_events.py", line 651, in run_until_complete
+    self.run_forever()
+  File "C:\Python312\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Python312\Lib\asyncio\base_events.py", line 618, in run_forever
+    self._run_once()
+  File "C:\Python312\Lib\asyncio\base_events.py", line 1951, in _run_once
+    handle._run()
+  File "C:\Python312\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python312\Lib\site-packages\discord\ui\view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 35, in gacha_button_callback
+    url_info = get_random_url()
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 52, in get_random_url
+    result = chardet.detect(f.read())
+  File "C:\Python312\Lib\site-packages\chardet\__init__.py", line 49, in detect
+    detector.feed(byte_str)
+  File "C:\Python312\Lib\site-packages\chardet\universaldetector.py", line 274, in feed
+    if prober.feed(byte_str) == ProbingState.FOUND_IT:
+  File "C:\Python312\Lib\site-packages\chardet\charsetgroupprober.py", line 70, in feed
+    state = prober.feed(byte_str)
+  File "C:\Python312\Lib\site-packages\chardet\sbcharsetprober.py", line 97, in feed
+    byte_str = self.filter_international_words(byte_str)
+  File "C:\Python312\Lib\site-packages\chardet\charsetprober.py", line 94, in filter_international_words
+    words = INTERNATIONAL_WORDS_PATTERN.findall(buf)
+
+2024-07-14 22:35:54,157 - Ignoring exception in view <GachaView timeout=180.0 children=1> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Gacha!' emoji=None row=None sku_id=None>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ui\view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 35, in gacha_button_callback
+    url_info = get_random_url()
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 64, in get_random_url
+    "rate": float(row["rate"])
+            ^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+2024-07-14 22:36:03,486 - Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 89, in <module>
+    bot.run(TOKEN)
+  File "C:\Python312\Lib\site-packages\discord\client.py", line 869, in run
+    asyncio.run(runner())
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Python312\Lib\asyncio\base_events.py", line 651, in run_until_complete
+    self.run_forever()
+  File "C:\Python312\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Python312\Lib\asyncio\base_events.py", line 618, in run_forever
+    self._run_once()
+  File "C:\Python312\Lib\asyncio\base_events.py", line 1951, in _run_once
+    handle._run()
+  File "C:\Python312\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python312\Lib\site-packages\discord\ui\view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 35, in gacha_button_callback
+    url_info = get_random_url()
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 52, in get_random_url
+    result = chardet.detect(f.read())
+  File "C:\Python312\Lib\site-packages\chardet\__init__.py", line 49, in detect
+    detector.feed(byte_str)
+  File "C:\Python312\Lib\site-packages\chardet\universaldetector.py", line 274, in feed
+    if prober.feed(byte_str) == ProbingState.FOUND_IT:
+  File "C:\Python312\Lib\site-packages\chardet\charsetgroupprober.py", line 70, in feed
+    state = prober.feed(byte_str)
+  File "C:\Python312\Lib\site-packages\chardet\mbcharsetprober.py", line 76, in feed
+    char_len = self.coding_sm.get_current_charlen()
+  File "C:\Python312\Lib\site-packages\chardet\codingstatemachine.py", line 82, in get_current_charlen
+    def get_current_charlen(self) -> int:
+
+2024-07-14 22:36:09,015 - Ignoring exception in view <GachaView timeout=180.0 children=1> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Gacha!' emoji=None row=None sku_id=None>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ui\view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 35, in gacha_button_callback
+    url_info = get_random_url()
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 64, in get_random_url
+    "rate": float(row["rate"])
+            ^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+2024-07-14 22:36:09,018 - Attempting a reconnect in 1.99s
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\client.py", line 667, in connect
+    await self.ws.poll_event()
+  File "C:\Python312\Lib\site-packages\discord\gateway.py", line 648, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2024-07-14 22:36:11,394 - Shard ID None has successfully RESUMED session 00ad2c96c5df337a20fc2eeac798b2c2.
+2024-07-14 22:39:05,094 - PyNaCl is not installed, voice will NOT be supported
+2024-07-14 22:39:05,095 - logging in using static token
+2024-07-14 22:40:41,806 - PyNaCl is not installed, voice will NOT be supported
+2024-07-14 22:40:41,807 - logging in using static token
+2024-07-14 22:40:42,953 - Shard ID None has connected to Gateway (Session ID: fedd71a90d9553d8616a384ba8ded7e0).
+2024-07-14 22:40:55,178 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Bjv95Pk9 with character: モモ, rarity: R
+2024-07-14 22:41:00,810 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/CoFCCvR6 with character: 古手川唯, rarity: R
+2024-07-14 22:41:16,563 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/T3fZhvDx with character: モモ, rarity: R
+2024-07-14 22:41:22,972 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/6QyvAJAh with character: ヤミ, rarity: R
+2024-07-14 22:41:33,432 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/fNusVyWX with character: ティアーユ, rarity: R
+2024-07-14 22:43:27,375 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/hcJv2Wqf with character: 古手川唯, rarity: R
+2024-07-14 22:43:35,558 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/NFiyScgb with character: ティアーユ, rarity: N
+2024-07-14 22:43:53,342 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/f6FnuWdS with character: ティアーユ, rarity: R
+2024-07-14 22:48:28,956 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/rJGENFAh with character: モモ, rarity: N
+2024-07-14 22:48:34,638 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/7j8mm7Hd with character: 古手川唯, rarity: N
+2024-07-14 22:52:13,285 - PyNaCl is not installed, voice will NOT be supported
+2024-07-14 22:52:13,286 - logging in using static token
+2024-07-14 22:52:14,419 - Shard ID None has connected to Gateway (Session ID: 53c57ddf26c9ab1c125101619b9fd062).
+2024-07-14 22:53:00,340 - Ignoring exception in view <GachaView timeout=180.0 children=1> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Gacha!' emoji=None row=None sku_id=None>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ui\view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 35, in gacha_button_callback
+    url_info = get_random_url()
+               ^^^^^^^^^^^^^^
+NameError: name 'get_random_url' is not defined
+2024-07-14 22:54:39,468 - PyNaCl is not installed, voice will NOT be supported
+2024-07-14 22:54:39,470 - logging in using static token
+2024-07-14 22:54:40,757 - Shard ID None has connected to Gateway (Session ID: 0d2be4100bb93eb3ccada38752dc7bf9).
+2024-07-14 22:55:24,462 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/DMgw5V12 with character: 古手川唯, rarity: N
+2024-07-14 22:55:29,520 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/pYjVf9Eo with character: 春菜, rarity: R
+2024-07-14 22:55:35,323 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/mQgzqrWz with character: モモ, rarity: R
+2024-07-14 22:55:41,154 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/L9C96jhZ with character: ララ, rarity: R
+2024-07-14 22:55:42,797 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Whb3Avwg with character: 美柑, rarity: N
+2024-07-14 22:55:44,114 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/L4esDizc with character: ティアーユ, rarity: SR
+2024-07-14 22:55:45,529 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/vpbwLng5 with character: 美柑, rarity: R
+2024-07-14 22:55:46,474 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/JsWQu2Jp with character: ララ, rarity: N
+2024-07-14 22:55:47,495 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Y4Hqyos9 with character: キョーコ, rarity: SR
+2024-07-14 22:55:48,447 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/hcJv2Wqf with character: 古手川唯, rarity: R
+2024-07-14 22:57:59,120 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/jGrtU6z8 with character: 古手川唯, rarity: R
+2024-07-14 22:59:45,733 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Gz4Cc8qB with character: キョーコ, rarity: R
+2024-07-14 23:02:13,072 - PyNaCl is not installed, voice will NOT be supported
+2024-07-14 23:02:13,074 - logging in using static token
+2024-07-14 23:02:14,153 - Shard ID None has connected to Gateway (Session ID: 4d2e06094373caff433a75d676ce14fd).
+2024-07-14 23:02:33,904 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/eDKmsw9N with character: キョーコ, rarity: N
+2024-07-14 23:02:50,829 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/2dUstzJZ with character: ララ, rarity: N
+2024-07-14 23:02:58,687 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/fX2dpYSM with character: キョーコ, rarity: R
+2024-07-14 23:04:44,113 - PyNaCl is not installed, voice will NOT be supported
+2024-07-14 23:04:44,115 - logging in using static token
+2024-07-14 23:04:45,164 - Shard ID None has connected to Gateway (Session ID: 04151172c79076ac432f4a695515fda1).
+2024-07-14 23:05:05,417 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/B3ChjZcK with character: ヤミ, rarity: SSR
+2024-07-14 23:05:13,707 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/XLG75KdC with character: 美柑, rarity: N
+2024-07-14 23:05:18,850 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/6cJkzzrG with character: 美柑, rarity: R
+2024-07-14 23:05:19,945 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/iV7Yezdy with character: ヤミ, rarity: N
+2024-07-14 23:05:20,955 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/ddPkrdiP with character: ヤミ, rarity: SR
+2024-07-14 23:05:21,835 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/hrF2AhZW with character: 古手川唯, rarity: R
+2024-07-14 23:05:22,716 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Whb3Avwg with character: 美柑, rarity: N
+2024-07-14 23:05:23,536 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/EuMq8ghm with character: ララ, rarity: N
+2024-07-14 23:05:24,486 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/tLvRE1JP with character: ティアーユ, rarity: N
+2024-07-14 23:05:45,246 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/NFiyScgb with character: ティアーユ, rarity: N
+2024-07-14 23:08:10,777 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/EEJxzfQF with character: ララ, rarity: N
+2024-07-14 23:08:59,524 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/UF2bswcV with character: ティアーユ, rarity: N
+2024-07-14 23:09:05,746 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/49CjNV3Q with character: 春菜, rarity: N
+2024-07-14 23:09:11,614 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/PCiQbvMW with character: キョーコ, rarity: N
+2024-07-14 23:10:00,270 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/vHhGYZZu with character: ヤミ, rarity: N
+2024-07-14 23:15:53,472 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/KNvk2DkG with character: 古手川唯, rarity: N
+2024-07-14 23:15:59,957 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/YgWiWrHD with character: ヤミ, rarity: N
+2024-07-14 23:16:48,540 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/UF2bswcV with character: ティアーユ, rarity: N
+2024-07-14 23:17:00,688 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/dtM8HRhB with character: モモ, rarity: N
+2024-07-14 23:17:02,686 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/2c4kFiv9 with character: モモ, rarity: N
+2024-07-14 23:18:48,561 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/3hYjsyzx with character: 春菜, rarity: R
+2024-07-14 23:34:38,671 - Shard ID None has successfully RESUMED session 04151172c79076ac432f4a695515fda1.
+2024-07-15 00:14:53,320 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 00:14:53,321 - logging in using static token
+2024-07-15 00:14:54,616 - Shard ID None has connected to Gateway (Session ID: af6af36eb658b354d87a7c006170b9d7).
+2024-07-15 00:15:19,948 - Ignoring exception in command creategachach
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 98, in creategachach
+    gacha_channel = await guild.create_text_channel('gacha-channel', overwrites=overwrites)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\guild.py", line 1373, in create_text_channel
+    data = await self._create_channel(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\http.py", line 752, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+2024-07-15 00:15:57,142 - Ignoring exception in command creategachach
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 98, in creategachach
+    gacha_channel = await guild.create_text_channel('gacha-channel', overwrites=overwrites)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\guild.py", line 1373, in create_text_channel
+    data = await self._create_channel(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\http.py", line 752, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+2024-07-15 00:16:08,206 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/pWondCfk with character: ティアーユ, rarity: N
+2024-07-15 00:16:18,948 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/8LzBAAKa with character: 美柑, rarity: N
+2024-07-15 00:29:49,803 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/kMku21DY with character: ヤミ, rarity: R
+2024-07-15 00:30:01,908 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/EuMq8ghm with character: ララ, rarity: N
+2024-07-15 00:30:03,309 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/qTNbtt3N with character: 美柑, rarity: SSR
+2024-07-15 00:30:23,165 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/pYjVf9Eo with character: 春菜, rarity: R
+2024-07-15 00:30:46,927 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/RVTmGkcS with character: 美柑, rarity: R
+2024-07-15 00:31:05,477 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Gz4Cc8qB with character: キョーコ, rarity: R
+2024-07-15 00:31:38,501 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/N3oKgrEM with character: ララ, rarity: R
+2024-07-15 00:32:03,609 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/6cJkzzrG with character: 美柑, rarity: R
+2024-07-15 00:32:31,186 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/fX2dpYSM with character: キョーコ, rarity: R
+2024-07-15 00:32:54,703 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Gz4Cc8qB with character: キョーコ, rarity: R
+2024-07-15 00:33:36,689 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 00:33:36,690 - logging in using static token
+2024-07-15 00:33:38,009 - Shard ID None has connected to Gateway (Session ID: 6d481e93b947b422f22e891e51f5bb07).
+2024-07-15 00:37:24,920 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 00:37:48,519 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 00:37:48,520 - logging in using static token
+2024-07-15 00:37:49,653 - Shard ID None has connected to Gateway (Session ID: ac62dabfb9291e87ea8f18ee5a81a563).
+2024-07-15 00:38:01,920 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Bjv95Pk9 with character: モモ, rarity: R
+2024-07-15 00:38:09,344 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/bK4H5PXb with character: 古手川唯, rarity: N
+2024-07-15 00:38:23,551 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/RVTmGkcS with character: 美柑, rarity: R
+2024-07-15 00:39:31,920 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/EEJxzfQF with character: ララ, rarity: N
+2024-07-15 00:39:51,814 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/jbRkVBS8 with character: 春菜, rarity: N
+2024-07-15 00:39:57,004 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/hrF2AhZW with character: 古手川唯, rarity: R
+2024-07-15 00:40:48,119 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Whb3Avwg with character: 美柑, rarity: N
+2024-07-15 00:41:05,322 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/7e88NnEK with character: 美柑, rarity: R
+2024-07-15 00:41:13,820 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/6k8UewDH with character: モモ, rarity: N
+2024-07-15 00:41:20,713 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/dYg21xN7 with character: ティアーユ, rarity: N
+2024-07-15 00:41:55,053 - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "creatgachach" is not found
+2024-07-15 00:46:04,454 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/6k8UewDH with character: モモ, rarity: N
+2024-07-15 00:46:58,702 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 00:46:58,703 - logging in using static token
+2024-07-15 00:46:59,784 - Shard ID None has connected to Gateway (Session ID: e5c3f4aeff8b1090de1fcdeae1f25ae5).
+2024-07-15 00:47:53,703 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/pYjVf9Eo with character: 春菜, rarity: R
+2024-07-15 01:08:28,558 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 01:08:28,559 - logging in using static token
+2024-07-15 01:08:29,521 - Shard ID None has connected to Gateway (Session ID: 71032383802ebea0d845f6d7bf2037ad).
+2024-07-15 01:08:44,131 - Ignoring exception in command gacha
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 74, in gacha
+    url_info = await get_random_url()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 39, in get_random_url
+    for row in reader:
+  File "C:\Python312\Lib\csv.py", line 115, in __next__
+    self.fieldnames
+  File "C:\Python312\Lib\csv.py", line 102, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\encodings\cp1254.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 125: character maps to <undefined>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 125: character maps to <undefined>
+2024-07-15 01:09:02,931 - Ignoring exception in command gacha
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 74, in gacha
+    url_info = await get_random_url()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 39, in get_random_url
+    for row in reader:
+  File "C:\Python312\Lib\csv.py", line 115, in __next__
+    self.fieldnames
+  File "C:\Python312\Lib\csv.py", line 102, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\encodings\cp1254.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 125: character maps to <undefined>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 125: character maps to <undefined>
+2024-07-15 01:10:51,287 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 01:10:51,288 - logging in using static token
+2024-07-15 01:10:52,350 - Shard ID None has connected to Gateway (Session ID: 24352dff8d9868c0d378f46dc4488662).
+2024-07-15 01:10:59,364 - Ignoring exception in command gacha
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 74, in gacha
+    url_info = await get_random_url()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 39, in get_random_url
+    for row in reader:
+  File "C:\Python312\Lib\csv.py", line 115, in __next__
+    self.fieldnames
+  File "C:\Python312\Lib\csv.py", line 102, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\encodings\cp1254.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 123: character maps to <undefined>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 123: character maps to <undefined>
+2024-07-15 01:14:01,704 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 01:14:01,706 - logging in using static token
+2024-07-15 01:14:02,741 - Shard ID None has connected to Gateway (Session ID: eb6c6edf48824159fc01b88abede0657).
+2024-07-15 01:14:12,159 - Ignoring exception in command gacha
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 74, in gacha
+    url_info = await get_random_url()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 39, in get_random_url
+    for row in reader:
+  File "C:\Python312\Lib\csv.py", line 115, in __next__
+    self.fieldnames
+  File "C:\Python312\Lib\csv.py", line 102, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\encodings\cp1254.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 127: character maps to <undefined>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 127: character maps to <undefined>
+2024-07-15 01:15:55,728 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 01:15:55,729 - logging in using static token
+2024-07-15 01:15:56,698 - Shard ID None has connected to Gateway (Session ID: 1e30e659e5029ce62c64a08a561916a6).
+2024-07-15 01:16:03,522 - Ignoring exception in command gacha
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 74, in gacha
+    url_info = await get_random_url()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 39, in get_random_url
+    for row in reader:
+  File "C:\Python312\Lib\csv.py", line 115, in __next__
+    self.fieldnames
+  File "C:\Python312\Lib\csv.py", line 102, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\encodings\cp1254.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 127: character maps to <undefined>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 127: character maps to <undefined>
+2024-07-15 01:16:08,251 - Ignoring exception in command gacha
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 74, in gacha
+    url_info = await get_random_url()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 39, in get_random_url
+    for row in reader:
+  File "C:\Python312\Lib\csv.py", line 115, in __next__
+    self.fieldnames
+  File "C:\Python312\Lib\csv.py", line 102, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\encodings\cp1254.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 127: character maps to <undefined>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 127: character maps to <undefined>
+2024-07-15 01:16:58,251 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 01:16:58,253 - logging in using static token
+2024-07-15 01:16:59,258 - Shard ID None has connected to Gateway (Session ID: acc0377f5f608a4fa20a748c7df195f6).
+2024-07-15 01:17:07,469 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/VHJbv8y5 with character: キョーコ, rarity: N
+2024-07-15 01:25:49,826 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 01:25:49,827 - logging in using static token
+2024-07-15 01:25:50,977 - Shard ID None has connected to Gateway (Session ID: 90fa239d38733571e4ef460facb83f03).
+2024-07-15 01:26:19,605 - Ignoring exception in command gacha
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 74, in gacha
+    url_info = await get_random_url()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 60, in get_random_url
+    await fetch_image(session, item['url'])  # 画像をキャッシュするために先にフェッチ
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akiik\Documents\AIimage\discord\main\discord-bot\bot.py", line 26, in fetch_image
+    await asyncio.sleep(delay)
+          ^^^^^^^
+NameError: name 'asyncio' is not defined. Did you forget to import 'asyncio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'asyncio' is not defined
+2024-07-15 01:27:03,041 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 01:27:03,042 - logging in using static token
+2024-07-15 01:27:04,061 - Shard ID None has connected to Gateway (Session ID: e500e9b9b531ba8c4e1f500113fdce44).
+2024-07-15 01:28:16,501 - keyloh.#0 (ID: 336196519973879808) got URL: https://i.imgur.com/rgkBfFK.png with character: ニコ, rarity: N
+2024-07-15 01:28:33,149 - keyloh.#0 (ID: 336196519973879808) got URL: https://i.imgur.com/rgkBfFK.png with character: ニコ, rarity: N
+2024-07-15 01:28:47,808 - keyloh.#0 (ID: 336196519973879808) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:32:19,445 - Ignoring exception in command creategachach
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1021, in invoke
+    await self.prepare(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 925, in prepare
+    if not await self.can_run(ctx):
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1288, in can_run
+    return await discord.utils.async_all(predicate(ctx) for predicate in predicates)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\utils.py", line 704, in async_all
+    for elem in gen:
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1288, in <genexpr>
+    return await discord.utils.async_all(predicate(ctx) for predicate in predicates)
+                                         ^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 2210, in predicate
+    raise MissingPermissions(missing)
+discord.ext.commands.errors.MissingPermissions: You are missing Administrator permission(s) to run this command.
+2024-07-15 01:33:41,020 - keyloh.#0 (ID: 336196519973879808) got URL: https://i.imgur.com/rgkBfFK.png with character: ニコ, rarity: N
+2024-07-15 01:33:56,816 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:34:14,283 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:34:28,173 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/rgkBfFK.png with character: ニコ, rarity: N
+2024-07-15 01:34:47,194 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:35:10,644 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:35:21,620 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/rgkBfFK.png with character: ニコ, rarity: N
+2024-07-15 01:35:33,881 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:35:50,307 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:36:07,086 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:36:19,993 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 01:37:23,713 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/rgkBfFK.png with character: ニコ, rarity: N
+2024-07-15 01:37:37,495 - kyon0711#0 (ID: 822461933571014737) got URL: https://i.imgur.com/OholF0T.png with character: 宵宮, rarity: SSR
+2024-07-15 03:15:39,783 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 03:15:39,784 - logging in using static token
+2024-07-15 03:15:40,776 - Shard ID None has connected to Gateway (Session ID: b7a0141f9952cfd58dbb11a5c967e489).
+2024-07-15 03:15:58,900 - keyloh.#0 (ID: 336196519973879808) got URL: https://i.imgur.com/rgkBfFK.png with character: ニコ, rarity: N
+2024-07-15 03:16:04,226 - keyloh.#0 (ID: 336196519973879808) got URL: https://i.imgur.com/rgkBfFK.png with character: ニコ, rarity: N
+2024-07-15 03:16:09,973 - keyloh.#0 (ID: 336196519973879808) got URL: https://i.imgur.com/7KyO8pY.png with character: 大和, rarity: N
+2024-07-15 03:16:51,303 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 03:16:51,304 - logging in using static token
+2024-07-15 03:16:52,364 - Shard ID None has connected to Gateway (Session ID: 84ab14508b524cfee43d0f5d205bc97c).
+2024-07-15 03:17:05,084 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/DMgw5V12 with character: 古手川唯, rarity: N
+2024-07-15 03:17:09,708 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/XyJoaizY with character: 春菜, rarity: R
+2024-07-15 03:17:17,903 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/2dUstzJZ with character: ララ, rarity: N
+2024-07-15 03:17:25,190 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/shoQUSSE with character: ララ, rarity: R
+2024-07-15 03:17:26,472 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/aG1nysDT with character: ティアーユ, rarity: R
+2024-07-15 03:17:27,750 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/S4i2TYbb with character: モモ, rarity: SR
+2024-07-15 03:17:29,010 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/dtM8HRhB with character: モモ, rarity: N
+2024-07-15 03:17:30,068 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/DMgw5V12 with character: 古手川唯, rarity: N
+2024-07-15 03:17:31,299 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/Bjv95Pk9 with character: モモ, rarity: R
+2024-07-15 03:17:32,491 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/hVezJL34 with character: 春菜, rarity: R
+2024-07-15 03:22:32,284 - Ignoring exception in command creategachach
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1021, in invoke
+    await self.prepare(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 925, in prepare
+    if not await self.can_run(ctx):
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1288, in can_run
+    return await discord.utils.async_all(predicate(ctx) for predicate in predicates)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\utils.py", line 704, in async_all
+    for elem in gen:
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1288, in <genexpr>
+    return await discord.utils.async_all(predicate(ctx) for predicate in predicates)
+                                         ^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 2210, in predicate
+    raise MissingPermissions(missing)
+discord.ext.commands.errors.MissingPermissions: You are missing Administrator permission(s) to run this command.
+2024-07-15 03:24:47,409 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 03:24:47,411 - logging in using static token
+2024-07-15 03:24:48,458 - Shard ID None has connected to Gateway (Session ID: 8d6c4563aa60cc921df8c495e42f0998).
+2024-07-15 03:30:50,462 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/rJGENFAh with character: モモ, rarity: N
+2024-07-15 03:37:06,512 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 03:37:06,513 - logging in using static token
+2024-07-15 03:37:07,871 - Shard ID None has connected to Gateway (Session ID: 24b26d584eb910fda06de0743f51999f).
+2024-07-15 03:37:58,490 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/L9C96jhZ with character: ララ, rarity: R
+2024-07-15 03:38:04,739 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/mQgzqrWz with character: モモ, rarity: R
+2024-07-15 03:38:06,748 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/N3oKgrEM with character: ララ, rarity: R
+2024-07-15 03:38:08,316 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/KkzBBJFM with character: モモ, rarity: N
+2024-07-15 03:38:09,705 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/iV7Yezdy with character: ヤミ, rarity: N
+2024-07-15 03:38:11,086 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/hcJv2Wqf with character: 古手川唯, rarity: R
+2024-07-15 03:38:12,529 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/hcJv2Wqf with character: 古手川唯, rarity: R
+2024-07-15 03:38:13,973 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/vaiWCyWk with character: 美柑, rarity: N
+2024-07-15 03:38:15,457 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/49CjNV3Q with character: 春菜, rarity: N
+2024-07-15 03:38:16,818 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/aG1nysDT with character: ティアーユ, rarity: R
+2024-07-15 03:38:43,442 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/fNusVyWX with character: ティアーユ, rarity: R
+2024-07-15 03:39:21,860 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/XLG75KdC with character: 美柑, rarity: N
+2024-07-15 03:52:04,773 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 03:52:04,775 - logging in using static token
+2024-07-15 03:52:05,960 - Shard ID None has connected to Gateway (Session ID: 5ed3d4e2e3080299f492f41d7e8ffea1).
+2024-07-15 03:52:52,139 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/EuMq8ghm with character: ララ, rarity: N
+2024-07-15 03:53:16,577 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/XyJoaizY with character: 春菜, rarity: R
+2024-07-15 03:53:18,260 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/UMCoKfxs with character: ヤミ, rarity: N
+2024-07-15 03:53:19,765 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/V4Q6j4cQ with character: 春菜, rarity: N
+2024-07-15 03:53:22,585 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/aG1nysDT with character: ティアーユ, rarity: R
+2024-07-15 03:53:24,298 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/JGzZxcWu with character: ティアーユ, rarity: R
+2024-07-15 03:53:26,847 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/MTQfPv8R with character: 春菜, rarity: SR
+2024-07-15 03:53:30,909 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/NbToTeSU with character: モモ, rarity: N
+2024-07-15 03:53:34,992 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/ryWyD3Qf with character: キョーコ, rarity: N
+2024-07-15 03:53:42,627 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/JsWQu2Jp with character: ララ, rarity: N
+2024-07-15 03:54:22,994 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/L4esDizc with character: ティアーユ, rarity: SR
+2024-07-15 03:54:37,530 - Ignoring exception in command resetall
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1021, in invoke
+    await self.prepare(ctx)
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 925, in prepare
+    if not await self.can_run(ctx):
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1288, in can_run
+    return await discord.utils.async_all(predicate(ctx) for predicate in predicates)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\utils.py", line 704, in async_all
+    for elem in gen:
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 1288, in <genexpr>
+    return await discord.utils.async_all(predicate(ctx) for predicate in predicates)
+                                         ^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\discord\ext\commands\core.py", line 2210, in predicate
+    raise MissingPermissions(missing)
+discord.ext.commands.errors.MissingPermissions: You are missing Administrator permission(s) to run this command.
+2024-07-15 03:54:56,998 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/WaJYozeC with character: キョーコ, rarity: N
+2024-07-15 03:55:43,225 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/KkzBBJFM with character: モモ, rarity: N
+2024-07-15 03:55:44,830 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/5Ex17bnv with character: 美柑, rarity: N
+2024-07-15 03:55:47,023 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/UF2bswcV with character: ティアーユ, rarity: N
+2024-07-15 03:55:49,040 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/tLvRE1JP with character: ティアーユ, rarity: N
+2024-07-15 03:55:50,803 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/bK4H5PXb with character: 古手川唯, rarity: N
+2024-07-15 03:55:52,362 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/6cJkzzrG with character: 美柑, rarity: R
+2024-07-15 03:55:54,344 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/7j8mm7Hd with character: 古手川唯, rarity: N
+2024-07-15 03:55:55,716 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/KNvk2DkG with character: 古手川唯, rarity: N
+2024-07-15 03:57:14,305 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/shoQUSSE with character: ララ, rarity: R
+2024-07-15 03:59:32,781 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 03:59:32,782 - logging in using static token
+2024-07-15 03:59:33,751 - Shard ID None has connected to Gateway (Session ID: 720b718d531d6b4784663d0a779e3394).
+2024-07-15 03:59:52,495 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/N3oKgrEM with character: ララ, rarity: R
+2024-07-15 04:00:17,350 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/2vHQpq6c with character: 春菜, rarity: N
+2024-07-15 04:00:40,631 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/V4Q6j4cQ with character: 春菜, rarity: N
+2024-07-15 04:04:58,624 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 04:04:58,625 - logging in using static token
+2024-07-15 04:04:59,712 - Shard ID None has connected to Gateway (Session ID: f439e46229009a957e42bee701f505b1).
+2024-07-15 04:05:31,761 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/WaJYozeC with character: キョーコ, rarity: N
+2024-07-15 04:05:59,384 - keyloh416#0 (ID: 1006537323401453610) got URL: https://pixeldrain.com/api/file/Gz4Cc8qB with character: キョーコ, rarity: R
+2024-07-15 04:10:53,835 - PyNaCl is not installed, voice will NOT be supported
+2024-07-15 04:10:53,836 - logging in using static token
+2024-07-15 04:10:54,928 - Shard ID None has connected to Gateway (Session ID: ed34f86f5cd5c290ffd6d4e00a0f2041).
+2024-07-15 04:11:35,032 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/jGrtU6z8 with character: 古手川唯, rarity: R
+2024-07-15 04:12:03,560 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/NbToTeSU with character: モモ, rarity: N
+2024-07-15 04:12:32,687 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/mQgzqrWz with character: モモ, rarity: R
+2024-07-15 04:12:46,020 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/vpbwLng5 with character: 美柑, rarity: R
+2024-07-15 04:14:18,088 - keyloh.#0 (ID: 336196519973879808) got URL: https://pixeldrain.com/api/file/7j8mm7Hd with character: 古手川唯, rarity: N
+2024-07-16 00:46:01,655 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 00:46:01,658 - logging in using static token
+2024-07-16 00:46:02,811 - Shard ID None has connected to Gateway (Session ID: fe4a870aa8d9dc022e775b4bcef2f381).
+2024-07-16 00:46:15,592 - Error fetching image https://drive.google.com/uc?export=view&id=1NSkVHA1l3hlKd1n49Ok1jOC6bGLPJbNs: Server disconnected
+2024-07-16 00:46:48,767 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1Gxql6Va9gUoScTFNeAivRp2Sbnt436Wg with character: ティアーユ, rarity: R
+2024-07-16 00:47:09,156 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1dpoLou9RDKTOuDVAvlD48T07xD7queqr with character: 美柑, rarity: SR
+2024-07-16 00:47:30,455 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1Bz2G-JlM9oQD4GZ1cHBb9mTh9UEdyfNE with character: 古手川唯, rarity: N
+2024-07-16 16:13:08,432 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 16:18:09,698 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 16:18:09,700 - logging in using static token
+2024-07-16 16:18:11,019 - Shard ID None has connected to Gateway (Session ID: 10199e607f5ee3c6dde2b966ac8fc534).
+2024-07-16 16:19:10,930 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1SqJgYvATiQWxltJqUv6kbWUDSI07Nnke with details: ララ, R
+2024-07-16 16:19:22,622 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=13frXQvKottTHJRsHk2oZjQX9_SukkE6q with details: モモ, R
+2024-07-16 16:24:14,411 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 16:24:14,412 - logging in using static token
+2024-07-16 16:24:15,505 - Shard ID None has connected to Gateway (Session ID: 281159bb721a5a48db02dc986113ea59).
+2024-07-16 16:24:27,826 - Error fetching image https://drive.google.com/uc?export=view&id=13zh_ev14FErc3efQkjENCKwzQ5j0HKNy: Server disconnected
+2024-07-16 16:25:13,954 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1wKBK8qoDIhJcdZQwZdZZnAuLO-p-sdoB with character: モモ, rarity: N
+2024-07-16 16:38:29,119 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 16:38:29,121 - logging in using static token
+2024-07-16 16:38:30,374 - Shard ID None has connected to Gateway (Session ID: 262b5305c90a6bb2d065b301656dd794).
+2024-07-16 16:38:59,889 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1x6FpQ1kul5XCZ8WOJl5pPxMhPyEWrZ4m with character: キョーコ, rarity: \U0001f308 N
+2024-07-16 16:39:11,995 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1qG0YIbgzWSDxG7Qsi2UHGeaSUwt6BGbK with character: 春菜, rarity: \u2728 \U0001f31f SR \U0001f31f \u2728
+2024-07-16 17:04:46,056 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 17:04:46,058 - logging in using static token
+2024-07-16 17:04:47,162 - Shard ID None has connected to Gateway (Session ID: 4af482a0905ec5f9584ab1caff33faf8).
+2024-07-16 17:05:06,001 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=15KQKnNLCBs43N0WFAzNftFE7ilamHPUJ with character: ティアーユ, rarity: \U0001f4ab R \U0001f4ab
+2024-07-16 17:14:34,455 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 17:14:34,456 - logging in using static token
+2024-07-16 17:14:35,424 - Shard ID None has connected to Gateway (Session ID: c7b8787ba95cf6761e6b741566054142).
+2024-07-16 17:14:52,088 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1j_6RUqObLwVzLubK8QdH8Oe05s28umsS with character: モモ, rarity: \U0001f308 N
+2024-07-16 17:15:18,850 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1Jn17QxOThoEFeT0G5aJTBMUbxcVjyP77 with character: ヤミ, rarity: \U0001f308 N
+2024-07-16 17:15:19,101 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1puB2CHnjulLqZ642B3yevSLkSE3IWTrA with character: 美柑, rarity: \U0001f308 N
+2024-07-16 17:15:23,174 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=19-ggnjctGd6ZzJvSnHqXtYIyPB00ddLU with character: 春菜, rarity: \U0001f308 N
+2024-07-16 17:15:34,875 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1QZVuAHLM6urY1ogldxbHbkl0w-mtTrkq with character: ヤミ, rarity: \U0001f4ab R \U0001f4ab
+2024-07-16 17:23:36,119 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 17:23:36,121 - logging in using static token
+2024-07-16 17:23:37,303 - Shard ID None has connected to Gateway (Session ID: 714eb82fe6ddc14c0abfb991d3030890).
+2024-07-16 17:23:49,728 - Error fetching image https://drive.google.com/uc?export=view&id=182Ft6XcJlTFBZVBDKfXFJXq2TC_31KAk: Server disconnected
+2024-07-16 17:23:49,729 - Error fetching image https://drive.google.com/uc?export=view&id=1NFWdg5BXhcKprW8aQC25jT7PYmD_dqka: Server disconnected
+2024-07-16 17:23:49,789 - Error fetching image https://drive.google.com/uc?export=view&id=1j_6RUqObLwVzLubK8QdH8Oe05s28umsS: Server disconnected
+2024-07-16 17:23:57,703 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1USuXAUOvamrS7XiYRyhFzKFF9Ekh8A7O with character: キョーコ, rarity: \U0001f308 N
+2024-07-16 17:24:42,763 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1wR8R4FvLgmKaKw-yoNdlfAvNZRwOSMWh with character: キョーコ, rarity: \U0001f4ab R \U0001f4ab
+2024-07-16 17:28:23,576 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 17:28:23,577 - logging in using static token
+2024-07-16 17:28:24,649 - Shard ID None has connected to Gateway (Session ID: 9349c2985bfcdda32d8e14e26fc01e30).
+2024-07-16 17:28:42,741 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1PPg85mDrAFSZ83yYcGmlrG7zxSxEYgUH with character: ヤミ, rarity: \U0001f308 N
+2024-07-16 17:31:32,293 - PyNaCl is not installed, voice will NOT be supported
+2024-07-16 17:31:32,294 - logging in using static token
+2024-07-16 17:31:33,529 - Shard ID None has connected to Gateway (Session ID: 86a459a4d194464866fc962e41ba4847).
+2024-07-16 17:31:46,124 - Error fetching image https://drive.google.com/uc?export=view&id=1uJp_-vhmJ66GuaDWbX-ZbfA-lEFfmO_g: Server disconnected
+2024-07-16 17:31:57,936 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1w2cewXetNF2rIydwrf1yTd-Lrkg8xCdw with character: 古手川唯, rarity: \U0001f4ab R \U0001f4ab
+2024-07-16 17:32:28,964 - keyloh.#0 (ID: 336196519973879808) got URL: https://drive.google.com/uc?export=view&id=1j_6RUqObLwVzLubK8QdH8Oe05s28umsS with character: モモ, rarity: \U0001f308 N
+2024-07-16 17:38:14,898 - Shard ID None has successfully RESUMED session 86a459a4d194464866fc962e41ba4847.
+2024-07-16 18:23:18,374 - Shard ID None has successfully RESUMED session 86a459a4d194464866fc962e41ba4847.
+2024-07-16 20:50:55,795 - Shard ID None has successfully RESUMED session 86a459a4d194464866fc962e41ba4847.
