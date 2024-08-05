@@ -6,16 +6,18 @@ import csv
 import chardet
 import aiohttp
 import asyncio
+from datetime import datetime, timedelta
+import pytz
 
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='/', intents=intents)
 
-# 各ユーザーの使用回数を追跡する辞書
 user_uses = {}
-image_cache = {}  # 画像のキャッシュ
+image_cache = {}
+reset_time = {"day": "Saturday", "time": "00:00"}
+tz = pytz.timezone('Asia/Tokyo')  # ここでタイムゾーンを指定
 
-# レア度に応じた絵文字を追加する関数
 def add_emoji_to_rarity(rarity):
     if rarity == "N":
         return "🌈 N"
@@ -121,8 +123,7 @@ async def animate_embed(ctx, url_info):
     embed.set_image(url=url_info['url'])
     await message.edit(embed=embed)
 
-    # Check if the image is successfully loaded
-    await asyncio.sleep(2)  # Wait a moment for the image to load
+    await asyncio.sleep(2)
     updated_message = await ctx.fetch_message(message.id)
     if not updated_message.embeds[0].image.url:
         embed.set_image(url=url_info['url'])
@@ -175,7 +176,14 @@ async def creategachathread(ctx):
         
         gacha_thread = await ctx.channel.create_thread(name=f'gacha-thread-{ctx.author.id}', type=discord.ChannelType.private_thread)
         await gacha_thread.add_user(ctx.author)
-        await gacha_thread.send(f"{ctx.author.mention}, this is your private gacha thread!")
+        await gacha_thread.edit(slowmode_delay=10)
+        
+        await gacha_thread.send(
+            f"{ctx.author.mention}\nここはあなた専用のガチャスレッドです。このスレッドで/gachaとメッセージを送信することでランダムなイラストが表示されます。\n"
+            "**注意：このスレッドからは退出しないでください。コマンドが使えなくなります。**\n\n"
+            f"@{ctx.author.name}\nThis is your dedicated gacha thread. By sending the message /gacha in this thread, a random illustration will be displayed.\n"
+            "**Note: Please do not leave this thread. The commands will no longer work if you do.**"
+        )
 
 @bot.command()
 @commands.has_permissions(administrator=True)
@@ -196,10 +204,30 @@ async def resetall(ctx):
     user_uses = {}
     await ctx.send("全ユーザーのガチャ回数制限をリセットしました。")
 
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def setreset(ctx, day: str, time: str):
+    global reset_time
+    reset_time = {"day": day, "time": time}
+    await ctx.send(f"ガチャ回数制限のリセットが{day}の{time}に設定されました。")
+
+@tasks.loop(minutes=1)
+async def scheduled_reset():
+    now = datetime.now(tz)
+    day_of_week = now.strftime("%A")
+    current_time = now.strftime("%H:%M")
+
+    if day_of_week == reset_time["day"] and current_time == reset_time["time"]:
+        user_uses.clear()
+        channel = discord.utils.get(bot.get_all_channels(), name="general")
+        if channel:
+            await channel.send("ガチャ回数制限がリセットされました。")
+
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}!')
     await cache_images()
+    scheduled_reset.start()
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 if TOKEN is None:
