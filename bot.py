@@ -6,10 +6,19 @@ import csv
 import chardet
 import aiohttp
 import asyncio
+import pytz
+from datetime import datetime, timedelta
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+import calendar
 
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='/', intents=intents)
+
+# タイムゾーンを東京に設定
+JST = pytz.timezone('Asia/Tokyo')
+scheduler = AsyncIOScheduler(timezone=JST)
+reset_time = None
 
 # 各ユーザーの使用回数と取得したカードNo.を追跡する辞書
 user_uses = {}
@@ -128,7 +137,7 @@ async def animate_embed(interaction, url_info):
     await asyncio.sleep(1)
 
     embed.set_field_at(1, name="レア度", value=url_info['rarity'], inline=True)
-    embed.add_field(name="カードNo.", value=f"No.{url_info['no']}", inline=True)
+    embed.add_field(name="イラストNo.", value=f"No.{url_info['no']}", inline=True)
     embed.add_field(name="タイトル", value=f"{url_info['title']}", inline=True)  # タイトルを追加
     await message.edit(embed=embed)
     await asyncio.sleep(1)
@@ -147,6 +156,7 @@ async def animate_embed(interaction, url_info):
         updated_message = await interaction.channel.fetch_message(message.id)
         if not updated_message.embeds[0].image.url:
             await interaction.followup.send("画像の読み込みに失敗しました。")
+
 # ページネーション用のボタンビュー
 class PaginatorView(discord.ui.View):
     def __init__(self, data, collected_cards, per_page=20):
@@ -163,19 +173,19 @@ class PaginatorView(discord.ui.View):
         page_content = []
 
         for item in self.data[start_idx:end_idx]:
-            # カードが取得済みなら☑、未取得なら⬛
+            # カードが取得済みなら :ballot_box_with_check:、未取得なら :blue_square:
             card_no = item["No."]
             title = item["title"]
             if card_no in self.collected_cards:
-                page_content.append(f"No.{card_no} ☑ [{title}]")
+                page_content.append(f"No.{card_no} {title} :ballot_box_with_check:")
             else:
-                page_content.append(f"No.{card_no} ⬛ [{title}]")
+                page_content.append(f"No.{card_no} {title} :blue_square:")
 
         return page_content
 
     async def update_message(self, interaction):
         page_content = "\n".join(self.get_page_content())
-        embed = discord.Embed(title=f"Page {self.current_page + 1}/{self.total_pages}", description=page_content)
+        embed = discord.Embed(title=f"{interaction.user.name}のリスト\nPage {self.current_page + 1}/{self.total_pages}", description=page_content)
         await interaction.response.edit_message(embed=embed, view=self)
 
     @discord.ui.button(label="<<", style=discord.ButtonStyle.danger)
@@ -277,17 +287,73 @@ async def creategachathread(ctx):
 
         # メッセージを送信
         await gacha_thread.send(
-            f"{ctx.author.mention}\nここはあなた専用のガチャスレッドです。このスレッドで/gachaとメッセージを送信することでランダムなイラストが表示されます。\n"
+            f"{ctx.author.mention}\nここはあなた専用のガチャスレッドです。このスレッドで/gachaとメッセージを送信することでボタンが出現します。それを押すことでイラストが表示されます。\n"
             "**注意：このスレッドからは退出しないでください。コマンドが使えなくなります。**\n\n"
-            f"@{ctx.author.name}\nThis is your dedicated gacha thread. By sending the message /gacha in this thread, a random illustration will be displayed.\n"
+            f"@{ctx.author.name}\nThis is your dedicated gacha thread. By sending the message /gacha in this thread, a button will appear. Pressing the button will display an illustration.\n"
             "**Note: Please do not leave this thread. The commands will no longer work if you do.**"
         )
 
 # artlist コマンド
 @bot.command()
 async def artlist(ctx):
-    user_id = ctx.author.id
-    collected_cards = user_cards.get(user_id, [])  # ユーザーが取得したカードNo.
+    # gacha-thread-以外のスレッドで実行できないように制限
+    if isinstance(ctx.channel, discord.Thread) and ctx.channel.name.startswith('gacha-thread-'):
+        user_id = ctx.author.id
+        collected_cards = user_cards.get(user_id, [])  # ユーザーが取得したカードNo.
+
+        gacha_data = []
+        with open('gacha_data.csv', 'rb') as f:
+            result = chardet.detect(f.read())
+        encoding = result['encoding']
+
+        with open('gacha_data.csv', newline='', encoding=encoding) as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                gacha_data.append({"No.": row["No."], "title": row["title"]})  # No.とタイトルを保存
+
+        if not gacha_data:
+            await ctx.send("データが見つかりません。")
+            return
+
+        # 最初のページのデータを表示し、ボタン付きのビューを送信
+        view = PaginatorView(gacha_data, collected_cards)
+        
+        # Embedのタイトルを修正して、ユーザーIDを表示する
+        embed = discord.Embed(title=f"{ctx.author.name}のリスト\nPage 1", description="\n".join(view.get_page_content()))
+        await ctx.send(embed=embed, view=view)
+    else:
+        # gacha-thread-以外では実行できない場合のエラーメッセージ
+        await ctx.send("このコマンドは専用のガチャスレッド内でのみ使用できます。")
+
+
+# 管理者によるガチャ回数リセットコマンド
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def gachareset(ctx, member: discord.Member = None):
+    if member:
+        user_id = member.id
+        user_uses[user_id] = 10  # 10回にリセット
+        await ctx.send(f"{member.mention} のガチャ回数制限がリセットされました。")
+    else:
+        user_id = ctx.author.id
+        user_uses[user_id] = 10
+        await ctx.send("あなたのガチャ回数制限がリセットされました。")
+
+# 全てのユーザーのガチャ回数リセットコマンド（管理者専用）
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def gacharesetall(ctx):
+    # 全てのユーザーの回数を10回にリセット
+    for user_id in user_uses:
+        user_uses[user_id] = 10
+    await ctx.send("全てのユーザーのガチャ回数制限がリセットされました。")
+
+# 指定したユーザーのリストを管理者が表示するコマンド
+@bot.command()
+@commands.has_permissions(administrator=True)  # 管理者のみが使えるコマンド
+async def artlistuser(ctx, member: discord.Member):
+    user_id = member.id
+    collected_cards = user_cards.get(user_id, [])  # 指定したユーザーが取得したカードNo.
 
     gacha_data = []
     with open('gacha_data.csv', 'rb') as f:
@@ -305,23 +371,45 @@ async def artlist(ctx):
 
     # 最初のページのデータを表示し、ボタン付きのビューを送信
     view = PaginatorView(gacha_data, collected_cards)
-    embed = discord.Embed(title="Page 1", description="\n".join(view.get_page_content()))
+    
+    # Embedのタイトルを修正して、指定したユーザーの名前を表示する
+    embed = discord.Embed(title=f"{member.name}のリスト\nPage 1", description="\n".join(view.get_page_content()))
     await ctx.send(embed=embed, view=view)
 
 
-
-# 管理者によるガチャ回数リセットコマンド
+# /setresetdate コマンドを追加
 @bot.command()
 @commands.has_permissions(administrator=True)
-async def gachareset(ctx, member: discord.Member = None):
-    if member:
-        user_id = member.id
-        user_uses[user_id] = 10  # 10回にリセット
-        await ctx.send(f"{member.mention} のガチャ回数制限がリセットされました。")
-    else:
-        user_id = ctx.author.id
+async def setresetdate(ctx, day_of_week: str, time_str: str):
+    global reset_time
+    
+    # 曜日と時間のパラメータを検証
+    try:
+        reset_time = f"{day_of_week} {time_str}"
+        target_day = day_of_week.capitalize()  # 曜日を統一して扱う
+        target_time = datetime.strptime(time_str, '%H:%M').time()
+        
+        # 現在の時間と設定するリセット時間を計算
+        now = datetime.now(JST)
+        days_ahead = (list(calendar.day_name).index(target_day) - now.weekday() + 7) % 7
+        reset_datetime = (now + timedelta(days=days_ahead)).replace(hour=target_time.hour, minute=target_time.minute, second=0, microsecond=0)
+        
+        # スケジューリングをキャンセルして再セット
+        scheduler.remove_all_jobs()  # 既存のジョブをリセット
+        scheduler.add_job(reset_gacha_uses, 'date', run_date=reset_datetime)
+        scheduler.start()  # スケジューリング開始
+        
+        await ctx.send(f"ガチャ回数のリセットは毎週 {target_day} の {time_str} に設定されました。")
+    except ValueError:
+        await ctx.send("曜日と時間の形式が正しくありません。例: `/setresetdate Saturday 00:00`")
+
+
+# ガチャの回数をリセットする関数
+def reset_gacha_uses():
+    for user_id in user_uses:
         user_uses[user_id] = 10
-        await ctx.send("あなたのガチャ回数制限がリセットされました。")
+    print("ガチャの回数がリセットされました。")
+
 
 @bot.event
 async def on_ready():
