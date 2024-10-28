@@ -19,4 +19,5 @@ tbb==2021.12.0
 tzdata==2023.4
 urllib3==2.2.2
 yarl==1.9.4
-
+apscheduler==3.9.1
+pytz==2023.3
